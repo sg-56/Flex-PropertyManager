@@ -1,0 +1,76 @@
+-- Create the Properties table
+-- CREATE TABLE Properties (
+--   property_id INT PRIMARY KEY AUTO_INCREMENT,
+--   property_name VARCHAR(255) NOT NULL,
+--   address VARCHAR(255) NOT NULL,
+--   city VARCHAR(100) NOT NULL,
+--   state VARCHAR(50) NOT NULL,
+--   zip_code VARCHAR(10) NOT NULL,
+--   property_type ENUM('residential', 'commercial') NOT NULL,
+--   square_footage INT,
+--   bedrooms INT,
+--   bathrooms INT
+-- );
+
+-- Create the Tenants table
+-- CREATE TABLE Tenants (
+--   tenant_id INT PRIMARY KEY AUTO_INCREMENT,
+--   first_name VARCHAR(50) NOT NULL,
+--   last_name VARCHAR(50) NOT NULL,
+--   email VARCHAR(100) UNIQUE NOT NULL,
+--   phone_number VARCHAR(20)
+-- );
+
+-- Create the Leases table
+-- CREATE TABLE Leases (
+--   lease_id INT PRIMARY KEY AUTO_INCREMENT,
+--   property_id INT NOT NULL,
+--   tenant_id INT,
+--   start_date DATE NOT NULL,
+--   end_date DATE NOT NULL,
+--   monthly_rent DECIMAL(10,2),
+--   FOREIGN KEY (property_id) REFERENCES Properties(property_id),
+--   FOREIGN KEY (tenant_id) REFERENCES Tenants(tenant_id)
+-- );
+
+-- Create the Maintenance_Requests table
+-- CREATE TABLE Maintenance_Requests (
+--   request_id INT PRIMARY KEY AUTO_INCREMENT,
+--   property_id INT NOT NULL,
+--   tenant_id INT,
+--   description TEXT NOT NULL,
+--   submitted_date DATETIME NOT NULL,
+--   status ENUM('pending', 'assigned', 'in_progress', 'completed') NOT NULL,
+--   FOREIGN KEY (property_id) REFERENCES Properties(property_id),
+--   FOREIGN KEY (tenant_id) REFERENCES Tenants(tenant_id)
+-- );
+
+-- Create the Payments table
+-- CREATE TABLE Payments (
+--   payment_id INT PRIMARY KEY AUTO_INCREMENT,
+--   lease_id INT NOT NULL,
+--   payment_date DATE NOT NULL,
+--   payment_amount DECIMAL(10,2) NOT NULL,
+--   payment_method ENUM('cash', 'check', 'online') NOT NULL,
+--   FOREIGN KEY (lease_id) REFERENCES Leases(lease_id)
+-- );
+
+-- Create the Users table
+-- CREATE TABLE Users (
+--   user_id INT PRIMARY KEY AUTO_INCREMENT,
+--   useremail VARCHAR(255) UNIQUE NOT NULL,
+--   password VARCHAR(255) NOT NULL,  -- Hashed password, never store plain text!
+--   user_type ENUM('owner', 'manager', 'tenant') NOT NULL
+-- );
+
+-- -- SET FOREIGN_KEY_CHECKS = 0;
+-- -- drop table if exists Leases;
+-- -- drop table if exists Maintenance_Requests;
+-- -- drop table if exists Users;
+-- -- Drop table if exists Properties;
+-- -- drop table if exists Tenants;
+-- -- drop table if exists Payments;
+-- -- SET FOREIGN_KEY_CHECKS = 1;
+
+
+
