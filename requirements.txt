@@ -34,7 +34,6 @@ defusedxml==0.7.1
 deprecation==2.1.0
 distlib==0.3.8
 distro==1.9.0
-distro-info==1.1+ubuntu0.2
 duplicity==2.2.3
 entrypoints==0.4
 et-xmlfile==1.1.0
