@@ -100,7 +100,6 @@ launchpadlib==1.11.0
 lazr.restfulclient==0.14.6
 lazr.uri==1.0.6
 lockfile==0.12.2
-louis==3.20.0
 lxml==5.1.0
 lz4==4.3.3
 macaroonbakery==1.3.4
